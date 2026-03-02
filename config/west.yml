@@ -8,4 +8,4 @@ manifest:
       revision: main
       import: app/west.yml
     - name: dm_6x6_zmk
-      path: modules/dm_6x6_zmk
+      path: ../modules/dm_6x6_zmk
