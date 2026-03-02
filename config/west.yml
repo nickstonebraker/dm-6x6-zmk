@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: my_local_repo
+      url-base: https://github.com/nickstonebraker/dm-6x6-zmk
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -9,3 +11,5 @@ manifest:
       import: app/west.yml
     - name: dm_6x6_zmk
       path: ../modules/dm_6x6_zmk
+      remote: my_local_repo
+      revision: main
