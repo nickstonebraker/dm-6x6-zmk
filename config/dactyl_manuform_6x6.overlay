@@ -1,9 +1,0 @@
-#include <dt-bindings/zmk/matrix_transform.h>
-#include "dactyl_manuform_6x6.dtsi"
-
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
-    };
-};
