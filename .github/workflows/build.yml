@@ -2,6 +2,10 @@ on: [push, pull_request, workflow_dispatch]
 
 name: Build
 
+include:
+  - board: nice_nano # Replace with the Pro Micro-compatible board you're using
+    shield: tester_pro_micro
+    
 jobs:
   build:
     runs-on: ubuntu-latest
