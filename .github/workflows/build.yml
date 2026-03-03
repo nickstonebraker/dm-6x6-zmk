@@ -9,7 +9,7 @@ jobs:
       image: zmkfirmware/zmk-build-arm:stable
     strategy:
       matrix:
-        board: ["nice_nano"] # Or nice_nano_v2 if needed
+        board: ["nice_nano_v2"] # Or nice_nano_v2 if needed
         shield: ["dactyl_manuform_6x6_left", "dactyl_manuform_6x6_right"]
     name: Build ${{ matrix.shield }}
     steps:
