@@ -26,7 +26,7 @@ jobs:
             zephyr/
             bootloader/
             zmk/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -41,7 +41,7 @@ jobs:
         run: west build -s zmk/app -b ${{ matrix.board }} -- -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: ${{ matrix.shield }} DTS File
         if: ${{ success() }}
-        run: cat -n build/zephyr/zephyr-app.dts.pre.tmp
+        run: cat -n build/zephyr/zephyr.dts
       - name: ${{ matrix.shield }} Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
