@@ -10,7 +10,8 @@ jobs:
     strategy:
       matrix:
         board: ["nice_nano_v2"] # Or nice_nano_v2 if needed
-        shield: ["dactyl_manuform_6x6_left", "dactyl_manuform_6x6_right", "tester_pro_micro"]
+        shield: ["dactyl_manuform_6x6_left", "dactyl_manuform_6x6_right", "tester_pro_micro", "settings_reset"]
+
     name: Build ${{ matrix.shield }}
     steps:
       - name: Checkout
