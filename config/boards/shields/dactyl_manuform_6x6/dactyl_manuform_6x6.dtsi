@@ -27,13 +27,13 @@
         label = "KSCAN";
 
         row-gpios
-            = <&gpio1 0  GPIO_ACTIVE_HIGH> // Row 0 (Was Row 6)
-            , <&gpio0 24 GPIO_ACTIVE_HIGH> // Row 1 (Was Row 5)
-            , <&gpio0 22 GPIO_ACTIVE_HIGH> // Row 2 (Was Row 4)
-            , <&gpio0 20 GPIO_ACTIVE_HIGH> // Row 3 (Was Row 3)
-            , <&gpio0 17 GPIO_ACTIVE_HIGH> // Row 4 (Was Row 2)
-            , <&gpio0 8  GPIO_ACTIVE_HIGH> // Row 5 (Was Row 1)
-            , <&gpio0 6  GPIO_ACTIVE_HIGH> // Row 6 (Was Row 0)
+            = <&gpio0 6  GPIO_ACTIVE_HIGH> // Row 0
+            , <&gpio0 8  GPIO_ACTIVE_HIGH> // Row 1
+            , <&gpio0 17 GPIO_ACTIVE_HIGH> // Row 2
+            , <&gpio0 20 GPIO_ACTIVE_HIGH> // Row 3
+            , <&gpio0 22 GPIO_ACTIVE_HIGH> // Row 4
+            , <&gpio0 24 GPIO_ACTIVE_HIGH> // Row 5
+            , <&gpio1 0  GPIO_ACTIVE_HIGH> // Row 6
             ;
 
         col-gpios
