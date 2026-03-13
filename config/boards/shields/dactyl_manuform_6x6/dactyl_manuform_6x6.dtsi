@@ -49,23 +49,6 @@
     };
 };
 
-/* Define the internal flash partition layout */
-&flash0 {
-    partitions {
-        compatible = "fixed-partitions";
-        #address-cells = <1>;
-        #size-cells = <1>;
-
-        /* * This usually sits at the end of the flash space. 
-         * For nRF52840, this 32KB block is safe.
-         */
-        storage_partition: partition@f8000 {
-            label = "storage";
-            reg = <0x000f8000 0x00008000>;
-        };
-    };
-};
-
 &usbd {
     status = "okay";
     cdc_acm_uart0: cdc_acm_uart0 {
