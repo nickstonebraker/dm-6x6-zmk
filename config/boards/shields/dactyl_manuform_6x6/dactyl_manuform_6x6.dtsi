@@ -5,8 +5,6 @@
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart0;
-        /* Use the internal flash partition for settings */
-        zephyr,settings-partition = &storage_partition;
     };
 
     default_transform: keymap_transform_0 {
