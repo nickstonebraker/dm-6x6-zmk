@@ -5,6 +5,7 @@
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
         zephyr,console = &cdc_acm_uart0;
+        /* Use the internal flash partition for settings */
         zephyr,settings-partition = &storage_partition;
     };
 
@@ -45,6 +46,23 @@
             , <&gpio1 4  GPIO_ACTIVE_HIGH> // Col 4 (Was Col 1)
             , <&gpio0 11 GPIO_ACTIVE_HIGH> // Col 5 (Was Col 0)
             ;
+    };
+};
+
+/* Define the internal flash partition layout */
+&flash0 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        /* * This usually sits at the end of the flash space. 
+         * For nRF52840, this 32KB block is safe.
+         */
+        storage_partition: partition@f8000 {
+            label = "storage";
+            reg = <0x000f8000 0x00008000>;
+        };
     };
 };
 
